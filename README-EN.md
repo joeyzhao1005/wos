@@ -1,2 +1,2 @@
 
-# WAI, Wonderful AI.
+# WOS, Wonderful Partner.

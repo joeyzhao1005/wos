@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .sites-section {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .site-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s;
+        }
+
+        .site-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .site-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 0.5rem;
+            border-radius: 12px;
+        }
+
+        .site-name {
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="logo-section">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+</div>
+<div class="sites-section">
+    <div class="sites-grid">
+        <a href="https://www.google.com" class="site-item">
+            <img src="assets/google.png" alt="Google" class="site-icon">
+            <span class="site-name">Google</span>
+        </a>
+        <a href="https://www.github.com" class="site-item">
+            <img src="assets/github.png" alt="GitHub" class="site-icon">
+            <span class="site-name">GitHub</span>
+        </a>
+        <a href="https://www.youtube.com" class="site-item">
+            <img src="assets/youtube.png" alt="YouTube" class="site-icon">
+            <span class="site-name">YouTube</span>
+        </a>
+        <a href="https://www.bilibili.com" class="site-item">
+            <img src="assets/bilibili.png" alt="哔哩哔哩" class="site-icon">
+            <span class="site-name">哔哩哔哩</span>
+        </a>
+        <a href="https://www.zhihu.com" class="site-item">
+            <img src="assets/zhihu.png" alt="知乎" class="site-icon">
+            <span class="site-name">知乎</span>
+        </a>
+        <a href="https://www.twitter.com" class="site-item">
+            <img src="assets/twitter.png" alt="Twitter" class="site-icon">
+            <span class="site-name">Twitter</span>
+        </a>
+        <a href="https://www.facebook.com" class="site-item">
+            <img src="assets/facebook.png" alt="Facebook" class="site-icon">
+            <span class="site-name">Facebook</span>
+        </a>
+        <a href="https://www.linkedin.com" class="site-item">
+            <img src="assets/linkedin.png" alt="LinkedIn" class="site-icon">
+            <span class="site-name">LinkedIn</span>
+        </a>
+    </div>
+</div>
+</body>
+</html>
