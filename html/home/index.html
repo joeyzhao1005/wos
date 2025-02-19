@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的主页</title>
+    <title>WOS</title>
     <style>
         * {
             margin: 0;
@@ -22,14 +23,29 @@
         .logo-section {
             flex: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 2rem;
         }
 
+        .logo-text {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 1rem;
+        }
+
         .logo {
-            max-width: 300px;
-            height: auto;
+            width: 12vmin;
+            height: 12vmin;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            cursor: pointer;
+        }
+
+        .logo.rotate {
+            transform: rotateZ(360deg);
         }
 
         .sites-section {
@@ -59,10 +75,13 @@
         }
 
         .site-icon {
-            width: 64px;
-            height: 64px;
+            width: 8vmin;
+            height: 8vmin;
             margin-bottom: 0.5rem;
-            border-radius: 12px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ffffff;
+            padding: 0;
         }
 
         .site-name {
@@ -71,45 +90,57 @@
         }
     </style>
 </head>
+
 <body>
 <div class="logo-section">
-    <img src="assets/logo.png" alt="Logo" class="logo">
+    <img src="assets/logo.png" alt="Logo" class="logo" onclick="this.classList.toggle('rotate')">
+    <div class="logo-text">WOS</div>
 </div>
 <div class="sites-section">
     <div class="sites-grid">
-        <a href="https://www.google.com" class="site-item">
-            <img src="assets/google.png" alt="Google" class="site-icon">
-            <span class="site-name">Google</span>
-        </a>
-        <a href="https://www.github.com" class="site-item">
-            <img src="assets/github.png" alt="GitHub" class="site-icon">
-            <span class="site-name">GitHub</span>
-        </a>
         <a href="https://www.youtube.com" class="site-item">
-            <img src="assets/youtube.png" alt="YouTube" class="site-icon">
+            <img src="https://5b0988e595225.cdn.sohucs.com/images/20200402/7ea1f5f0e0904289bd372078f8c3c1cf.jpeg" alt="YouTube"
+                 class="site-icon">
             <span class="site-name">YouTube</span>
         </a>
         <a href="https://www.bilibili.com" class="site-item">
-            <img src="assets/bilibili.png" alt="哔哩哔哩" class="site-icon">
+            <img src="https://img.zcool.cn/community/010b3e5c6a42d8a801213f26d0ded9.jpg?imageMogr2/auto-orient/thumbnail/160x160r%3e/gravity/center/crop/160x160/sharpen/0.5/quality/100/format/webp"
+                 alt="哔哩哔哩" class="site-icon">
             <span class="site-name">哔哩哔哩</span>
         </a>
-        <a href="https://www.zhihu.com" class="site-item">
-            <img src="assets/zhihu.png" alt="知乎" class="site-icon">
-            <span class="site-name">知乎</span>
+        <a href="https://yuanbao.tencent.com/" class="site-item">
+            <img src="https://xj-psd-1258344703.cos.ap-guangzhou.myqcloud.com/image/hunyuan/brand2024/logo64@3x.png"
+                 alt="元宝" class="site-icon">
+            <span class="site-name">元宝</span>
         </a>
-        <a href="https://www.twitter.com" class="site-item">
-            <img src="assets/twitter.png" alt="Twitter" class="site-icon">
-            <span class="site-name">Twitter</span>
+        <a href="https://www.4399.com" class="site-item">
+            <img src="https://p3-dy.byteimg.com/aweme/720x720/a07f00128979eaee1645.jpeg" alt="4399"
+                 class="site-icon">
+            <span class="site-name">4399</span>
         </a>
-        <a href="https://www.facebook.com" class="site-item">
-            <img src="assets/facebook.png" alt="Facebook" class="site-icon">
-            <span class="site-name">Facebook</span>
+        <a href="https://www.x.com" class="site-item">
+            <img src="https://img2.bianews.com/image/bianews/news/img/1691377718699.jpg?imageView2/0/format/jpg/q/75"
+                 alt="X" class="site-icon">
+            <span class="site-name">X</span>
         </a>
-        <a href="https://www.linkedin.com" class="site-item">
-            <img src="assets/linkedin.png" alt="LinkedIn" class="site-icon">
-            <span class="site-name">LinkedIn</span>
+        <a href="https://www.google.com" class="site-item">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-256.png"
+                 alt="Google" class="site-icon">
+            <span class="site-name">Google</span>
         </a>
+        <a href="https://www.bing.com" class="site-item">
+            <img src="https://p4.itc.cn/q_70/images03/20201005/0719b810ed9748038cdd8e2963277f63.jpeg" alt="Bing"
+                 class="site-icon">
+            <span class="site-name">Bing</span>
+        </a>
+        <a href="https://www.baidu.com" class="site-item">
+            <img src="http://static.home.baidu.com/homebd/bcheilkdnjmagf1565604014.jpg?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2019-08-12T10%3A00%3A14Z%2F-1%2F%2F64fd80391c3762a0207aa8830d5f51a1a4e6e10c3954eecb97fa0b810a09a613" alt="百度"
+                 class="site-icon">
+            <span class="site-name">百度</span>
+        </a>
+
     </div>
 </div>
 </body>
+
 </html>
