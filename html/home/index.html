@@ -23,6 +23,21 @@
             flex-direction: column;
         }
 
+        /* 隐藏滚动条但保持滚动功能 */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 兼容Firefox */
+        body {
+            scrollbar-width: none;
+        }
+
+        /* 兼容IE */
+        body {
+            -ms-overflow-style: none;
+        }
+
         .logo-section {
             flex: 1;
             display: flex;
